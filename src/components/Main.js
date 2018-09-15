@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PhoneList from './PhonesList';
-import ItemList from './ItemList';
-import Spinner from './Spinner';
 
 const API = 'http://localhost:3001/phones'
 
@@ -11,8 +9,7 @@ class Main extends Component {
         super(props)
         this.state = {
             mobilesCatalog: [],
-            loading: true,
-            hidden: true,
+            loading: true
         }
     }
 
@@ -26,9 +23,6 @@ class Main extends Component {
             })
     }
 
-    onHandleClick = () => {
-        this.setState({ hidden: !this.state.hidden })
-    }
 
     render() {
         const mobilesData = this.state.mobilesCatalog;
@@ -37,8 +31,6 @@ class Main extends Component {
             <PhoneList
                 mobilesCatalog={mobilesData}
                 loading={this.state.loading}
-                hidden={this.state.hidden}
-                onHandleClick={this.onHandleClick}
             />
         );
     }

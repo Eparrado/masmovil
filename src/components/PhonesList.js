@@ -14,8 +14,6 @@ class PhoneList extends Component {
                         <ItemList
                             key={index}
                             {...mobile}
-                            hidden={this.props.hidden}
-                            onClick={this.props.onHandleClick}
                         />
                     )}
                 </ul>

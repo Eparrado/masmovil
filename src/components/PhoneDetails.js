@@ -5,7 +5,7 @@ class PhoneDetails extends Component {
         const showComponent = this.props.hidden ? "hidden" : '';
 
         return (
-            <div className={`item--details ${showComponent}`}>
+            <div className={`item--details ${showComponent}`} >
                 <p className="details--title">Color:
                     <span className="details--text"> {this.props.color}</span>
                 </p>
