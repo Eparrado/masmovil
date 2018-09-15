@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+app.use(express.static('public'));
 
 // ROUTES:
 app.get('/phones', (request, response) => {
@@ -11,7 +12,7 @@ app.get('/phones', (request, response) => {
             brand: 'Apple',
             title: 'iPhone X',
             color: 'Silver',
-            photo: './src/images/iphone-x.jpg',
+            photo: 'http://localhost:5000/images/iphone-x.jpg',
             description: '64 GB, 5.8" Super Retina HD Display, 12 Mpx, Red 4G LTE',
             price: '899.99$'
         },
@@ -20,7 +21,7 @@ app.get('/phones', (request, response) => {
             brand: 'Samsung',
             title: 'Galaxy S9+',
             color: 'Lilac Purple',
-            photo: './src/images/samsung-galaxy.jpg',
+            photo: 'http://localhost:5000/images/samsung-galaxy.jpg',
             description: '64 GB, 6.2” QHD Super AMOLED Display, 8MP Front Facing Camera, Red 4G LTE',
             price: '840.00$'
         },
@@ -29,7 +30,7 @@ app.get('/phones', (request, response) => {
             brand: 'LG',
             title: 'V30',
             color: 'Silver',
-            photo: './src/images/lg-v30.jpg',
+            photo: 'http://localhost:5000/images/lg-v30.jpg',
             description: '64 GB, Dual 16MP/13MP Wide Rear Camera, 6.0" QHD+ FullVision, Red 4G LTE',
             price: '696.00$'
         },
@@ -38,7 +39,7 @@ app.get('/phones', (request, response) => {
             brand: 'Motorola',
             title: 'Moto e Plus 5th Gen',
             color: 'Blue',
-            photo: './src/images/motorola-moto-e-plus.jpg',
+            photo: 'http://localhost:5000/images/motorola-moto-e-plus.jpg',
             description: '32 GB, 6" Max Vision Display, Red 4G LTE',
             price: '225.00$'
         }
