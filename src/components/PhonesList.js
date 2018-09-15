@@ -9,7 +9,7 @@ class PhoneList extends Component {
         return (
             <main className="page__main">
                 {this.props.loading ? <Spinner /> : null}
-                <ul> {
+                <ul className="page__main--list"> {
                     mobilesData.map((mobile, index) =>
                         <ItemList
                             key={index}

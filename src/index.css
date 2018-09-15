@@ -5,10 +5,12 @@
   --color-midtone: #808A91;
 
   --font-size-extrasmall: 14px;
-  --font-size-small: 18px;
+  --font-size-small: 16px;
   --font-size-medium: 24px;
   --font-size-big: 36px;
 }
+
+* {box-sizing: border-box;}
 
 body {
   margin: 0;
@@ -57,24 +59,95 @@ body {
 /* MAIN */
 
 .page__main {
+  padding: 0 20px;
+}
+.page__main--loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page__main--list {
+  list-style: none;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr ;
   grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.page__main--list--item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-primary);
+  padding: 10px;
+}
+.item--brand {
+  margin: 0;
+  padding-left: 10px;
+  width: 100%;
+  font-size: var(--font-size-extrasmall);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.item--title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  width: 100%;
+  font-weight: 400;
+  font-size: var(--font-size-small);
+}
+.item--img {
+  width: 100%;
+}
+.item--details {
+  margin-top: 20px;
+  padding: 10px 10px 0 10px;
+  border-top: 2px solid var(--color-primary);
+  text-align: center;
+}
+.details--title {
+  font-weight: 800;
+  font-size: var(--font-size-small)
+}
+.details--text { 
+  font-weight: 400;
+  font-size: var(--font-size-small)
 }
 
+
+@media all and (min-width:768px) {
+  .page__main--list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media all and (min-width:1024px) {
+  .page__main--list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+  }
+}
 /* FOOTER */
 .page__footer {
   background-color: var(--color-dark);
-  padding: 20px 10px ;
+  padding: 10px 20px ;
 }
 .page__footer--text {
   font-size: var(--font-size-extrasmall);
   margin: 0;
   font-style: italic;
+  text-align: center;
 }
 
 
 /* HELPERS */
+.hidden {display: none}
+
 .color-light {
   color: var(--color-light);
 }
