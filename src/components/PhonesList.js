@@ -33,20 +33,29 @@ class PhoneList extends Component {
         const mobilesData = this.state.mobilesCatalog;
 
         return (
-            <main className="phone-list">
-                <h1>List of phones, including item list</h1>
-                {this.state.loading ? <Spinner /> : null}
-                <ul> {
-                    mobilesData.map((mobile, index) =>
-                        <ItemList
-                            key={index}
-                            {...mobile}
-                            hidden={this.state.hidden}
-                            onClick={this.onHandleClick}
-                        />
-                    )}
-                </ul>
-            </main>
+            <div>
+                <header>
+                    <h1>PhoneCatalog</h1>
+                </header>
+                <main className="phone-list">
+                    {this.state.loading ? <Spinner /> : null}
+                    <ul> {
+                        mobilesData.map((mobile, index) =>
+                            <ItemList
+                                key={index}
+                                {...mobile}
+                                hidden={this.state.hidden}
+                                onClick={this.onHandleClick}
+                            />
+                        )}
+                    </ul>
+                </main>
+                <footer>
+                    <p> by Eparrado</p>
+                </footer>
+
+            </div>
+
         );
     }
 }
