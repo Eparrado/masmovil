@@ -33,11 +33,14 @@ class PhoneList extends Component {
         const mobilesData = this.state.mobilesCatalog;
 
         return (
-            <div>
-                <header>
-                    <h1>PhoneCatalog</h1>
+            <div className="page">
+                <header className="page__header">
+                    <h1 className="page__header--title">
+                        Phone
+                        <span className="page__header--title color-light">Catalog</span>
+                    </h1>
                 </header>
-                <main className="phone-list">
+                <main className="page__main">
                     {this.state.loading ? <Spinner /> : null}
                     <ul> {
                         mobilesData.map((mobile, index) =>
@@ -50,8 +53,8 @@ class PhoneList extends Component {
                         )}
                     </ul>
                 </main>
-                <footer>
-                    <p> by Eparrado</p>
+                <footer className="page__footer">
+                    <p className="page__footer--text color-light"> by Eparrado</p>
                 </footer>
 
             </div>

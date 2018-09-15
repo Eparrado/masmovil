@@ -1,5 +1,59 @@
+:root {
+  --color-dark: black;
+  --color-light: white;
+  --color-primary: #FFDF00;
+  --color-midtone: #808A91;
+
+  --font-size-extrasmall: 14px;
+  --font-size-small: 18px;
+  --font-size-medium: 24px;
+  --font-size-big: 42px;
+
+  --mobile: 320px;
+  --table: 768px;
+  --desktop: 1024px;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--font-size-small);
+  font-weight: 400;
+}
+
+
+/* HEADER */
+.page__header {
+  background-color: var(--color-dark);
+  padding: 40px 20px ;
+}
+.page__header--title {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: var(--color-primary);
+  font-size: var(--font-size-big);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0;
+}
+
+
+
+
+/* MAIN */
+
+/* FOOTER */
+.page__footer {
+  background-color: var(--color-dark);
+  padding: 20px 10px ;
+}
+.page__footer--text {
+  font-size: var(--font-size-extrasmall);
+  margin: 0;
+  font-style: italic;
+}
+/* HELPERS */
+.color-light {
+  color: var(--color-light);
 }
