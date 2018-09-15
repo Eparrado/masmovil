@@ -1,12 +1,34 @@
 import React, { Component } from 'react';
-import iphone from './images/iphone-x.jpg';
 import './App.css';
+import PhonesList from './components/PhonesList';
+// import Spinner from './components/Spinner';
+
+const API = 'http://localhost:3001/phones'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      mobilesCatalog: []
+    }
+  }
+
+  componentDidMount() {
+    fetch(API)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          mobilesCatalog: data
+        });
+      });
+  }
+
+
   render() {
     return (
       <div className="App">
-        <p>Phone Catalog - Eparrado</p>
+        <PhonesList />
+        <p>Need to add a spinner when API is fetchind the data</p>
       </div>
     );
   }

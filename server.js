@@ -45,8 +45,9 @@ app.get('/phones', (request, response) => {
         }
     ];
     response.setHeader('Content-Type', 'application/json');
+    response.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
     response.json(phones);
 });
 
 // START APP
-app.listen(5000, () => console.log('Example app listening on port 5000!'))
+app.listen(3001, () => console.log('Example app listening on port 3001!'))
