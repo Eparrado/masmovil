@@ -37,7 +37,7 @@ To run the server:
 You need to run the server and the application AT THE SAME TIME, otherwise the data from the api won't be accessible.
 
 ### Authors
-[Estela Parrado](https://github.com/Eparrado), Front-end developers  
+[Estela Parrado](https://github.com/Eparrado), Front-end developer
 
 
  
