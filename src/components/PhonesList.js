@@ -31,7 +31,8 @@ class PhoneList extends Component {
 
 const mapStateToProps = state => {
     return {
-        phones: state.mobilesCatalog
+        phones: state.mobilesCatalog,
+        loading: state.loading
     }
 }
 
