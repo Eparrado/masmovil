@@ -6,8 +6,8 @@ class Spinner extends Component {
         return (
             <span className="page__main--loader">
                 <svg width="100" height="100" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
-                    <g fill="FFDF00" fill-rule="evenodd">
-                        <g transform="translate(1 1)" stroke-width="2">
+                    <g fill="FFDF00" fillRule="evenodd">
+                        <g transform="translate(1 1)" strokeWidth="2">
                             <circle cx="5" cy="50" r="5">
                                 <animate attributeName="cy"
                                     begin="0s" dur="2.2s"

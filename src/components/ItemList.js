@@ -33,4 +33,4 @@ const visibilityStateToProps = state => {
     }
 }
 
-export default connect(visibilityStateToProps, { showPhoneDetails })(ItemList);
+export default connect(visibilityStateToProps, { showPhoneDetails })(ItemList); 
