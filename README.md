@@ -31,7 +31,10 @@ To start the application:
 
 To run the server:
 
-    npm rum server
+    npm run server
+
+## <font color=red>IMPORTANT!</font>
+You need to run the server and the application AT THE SAME TIME, otherwise the data from the api won't be accessible.
 
 ### Authors
 [Estela Parrado](https://github.com/Eparrado), Front-end developers  
