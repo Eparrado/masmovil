@@ -11,3 +11,10 @@ export function fetchMobilesData() {
             })
     }
 }
+
+
+export const SHOW_PHONE_DETAILS = 'SHOW_PHONE_DETAILS'
+
+export function showPhoneDetails() {
+    return ({ type: SHOW_PHONE_DETAILS })
+}

@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-// import PhoneDetails from './PhoneDetails';
+import { connect } from "react-redux";
+import { showPhoneDetails } from '../actions/actions-index';
+import PhoneDetails from './PhoneDetails';
 
 class ItemList extends Component {
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {
-    //         hidden: true,
-    //     }
-    // }
 
-    // onHandleClick = (e) => {
-    //     e.preventDefault()
-    //     this.setState({ hidden: !this.state.hidden })
-    // }
+    onHandleClick = (e) => {
+        e.preventDefault()
+        this.props.showPhoneDetails()
+    }
 
     render() {
         return (
@@ -20,15 +16,21 @@ class ItemList extends Component {
                 <h3 className="item--brand">{this.props.brand}</h3>
                 <h2 className="item--title">{this.props.title}</h2>
                 <img className="item--img" src={this.props.photo} alt={this.props.title} />
-                {/* <PhoneDetails
+                <PhoneDetails
                     color={this.props.color}
                     description={this.props.description}
                     price={this.props.price}
-                    hidden={this.state.hidden}
-                /> */}
+                    hidden={this.props.visibility}
+                />
             </li>
         );
     }
 }
 
-export default ItemList;
+const visibilityStateToProps = state => {
+    return {
+        visibility: state.hidden
+    }
+}
+
+export default connect(visibilityStateToProps, { showPhoneDetails })(ItemList);

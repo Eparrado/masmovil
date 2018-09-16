@@ -7,7 +7,6 @@ import Spinner from './Spinner';
 class PhoneList extends Component {
 
     componentWillMount() {
-        console.log(this.props.fetchMobilesData())
         this.props.fetchMobilesData()
     }
 
