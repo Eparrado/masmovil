@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ItemList from './ItemList';
-import Spinner from './Spinner';
+import ItemList from '../ItemList/ItemList';
+import Spinner from '../Spinner/Spinner';
 
 class PhoneList extends Component {
     render() {
@@ -15,7 +15,6 @@ class PhoneList extends Component {
                             key={index}
                             {...mobile}
                             onHandleClick={this.props.onHandleClick}
-                        // phones={mobilesData}
                         />
                     )}
                 </ul>

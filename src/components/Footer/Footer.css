@@ -1,0 +1,11 @@
+.page__footer {
+    background-color: var(--color-dark);
+    padding: 10px 20px ;
+  }
+
+  .page__footer--text {
+    font-size: var(--font-size-extrasmall);
+    margin: 0;
+    font-style: italic;
+    text-align: center;
+}

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchMobilesData } from '../actions/actions-index';
-import { showPhoneDetails } from '../actions/actions-index';
-import PhoneDetails from './PhoneDetails';
-import PhoneList from './PhonesList';
+import { fetchMobilesData } from '../../actions/actions-index';
+import { showPhoneDetails } from '../../actions/actions-index';
+import PhoneDetails from './PhoneDetails/PhoneDetails';
+import PhoneList from './PhoneList/PhonesList';
 
 class Main extends Component {
 

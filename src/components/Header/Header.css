@@ -1,0 +1,29 @@
+.page__header {
+    background-color: var(--color-dark);
+    padding: 10px 20px ;
+    border-bottom: 4px solid var(--color-primary);
+}
+  
+.page__header--title {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--color-primary);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0;
+}
+  
+.color-light {
+    color: var(--color-light);
+}
+
+@media all and (min-width:768px) {
+    .page__header {
+      padding: 20px 30px;
+    }
+    .page__header--title {
+      font-size: var(--font-size-medium);
+    }
+}
+  
