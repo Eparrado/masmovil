@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ItemList from '../ItemList/ItemList';
 import Spinner from '../Spinner/Spinner';
+import './PhoneList.css'
 
 class PhoneList extends Component {
     render() {

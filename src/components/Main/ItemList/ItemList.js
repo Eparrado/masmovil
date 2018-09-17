@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PhoneDetails from '../PhoneDetails/PhoneDetails';
+import './ItemList.css'
 
 class ItemList extends Component {
     render() {

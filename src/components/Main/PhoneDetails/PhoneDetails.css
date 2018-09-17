@@ -1,0 +1,23 @@
+.item--details {
+    position: absolute;
+    padding: 10px 60px 0 60px;
+    text-align: center;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.details--title {
+  font-weight: 800;
+  font-size: var(--font-size-small)
+}
+
+.details--text { 
+  font-weight: 400;
+  font-size: var(--font-size-small)
+}
+
+.hidden {display: none}

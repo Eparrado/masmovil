@@ -1,0 +1,38 @@
+
+.page__main--list--item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-primary);
+    padding: 20px;
+}
+
+.item--brand {
+    margin: 0;
+    padding-left: 10px;
+    width: 100%;
+    font-size: var(--font-size-extrasmall);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.item--title {
+    margin: 0;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    width: 100%;
+    font-weight: 400;
+    font-size: var(--font-size-small);
+}
+
+  .item--img {
+    width: 80%;
+}
+
+@media all and (min-width:768px) {
+    .item--img {
+      width: 90%;
+    }
+  }
