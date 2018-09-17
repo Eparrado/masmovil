@@ -1,14 +1,39 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { fetchMobilesData } from '../actions/actions-index';
+import { showPhoneDetails } from '../actions/actions-index';
+import PhoneDetails from './PhoneDetails';
 import PhoneList from './PhonesList';
 
 class Main extends Component {
 
+    componentWillMount() {
+        this.props.fetchMobilesData()
+    }
+
+    onHandleClick = (e) => {
+        e.preventDefault()
+        this.props.showPhoneDetails(e.currentTarget, PhoneDetails)
+    }
 
     render() {
         return (
-            <PhoneList />
+            <PhoneList
+                mobilesData={this.props.phones}
+                loading={this.props.loading}
+                onHandleClick={this.onHandleClick}
+
+            />
         );
     }
 }
 
-export default Main;
+const mapStateToProps = state => {
+    return {
+        phones: state.mobilesCatalog,
+        loading: state.loading
+    }
+}
+
+export default connect(mapStateToProps, { fetchMobilesData, showPhoneDetails })(Main);
+// export default Main;

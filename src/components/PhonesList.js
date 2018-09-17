@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
 import ItemList from './ItemList';
-import { fetchMobilesData } from '../actions/actions-index';
 import Spinner from './Spinner';
 
 class PhoneList extends Component {
-
-    componentWillMount() {
-        this.props.fetchMobilesData()
-    }
-
     render() {
-        const mobilesData = this.props.phones;
+        const mobilesData = this.props.mobilesData;
 
         return (
             <main className="page__main">
@@ -21,7 +14,8 @@ class PhoneList extends Component {
                         <ItemList
                             key={index}
                             {...mobile}
-                            phones={mobilesData}
+                            onHandleClick={this.props.onHandleClick}
+                        // phones={mobilesData}
                         />
                     )}
                 </ul>
@@ -30,11 +24,4 @@ class PhoneList extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        phones: state.mobilesCatalog,
-        loading: state.loading
-    }
-}
-
-export default connect(mapStateToProps, { fetchMobilesData })(PhoneList);
+export default PhoneList;
