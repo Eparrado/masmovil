@@ -21,6 +21,7 @@ class PhoneList extends Component {
                         <ItemList
                             key={index}
                             {...mobile}
+                            phones={mobilesData}
                         />
                     )}
                 </ul>

@@ -7,7 +7,7 @@ class ItemList extends Component {
 
     onHandleClick = (e) => {
         e.preventDefault()
-        this.props.showPhoneDetails()
+        this.props.showPhoneDetails(e.currentTarget, PhoneDetails)
     }
 
     render() {
@@ -20,7 +20,6 @@ class ItemList extends Component {
                     color={this.props.color}
                     description={this.props.description}
                     price={this.props.price}
-                    hidden={this.props.visibility}
                 />
             </li>
         );
@@ -28,9 +27,7 @@ class ItemList extends Component {
 }
 
 const visibilityStateToProps = state => {
-    return {
-        visibility: state.hidden
-    }
+    return {}
 }
 
 export default connect(visibilityStateToProps, { showPhoneDetails })(ItemList); 

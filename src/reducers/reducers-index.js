@@ -3,8 +3,8 @@ import { SHOW_PHONE_DETAILS } from '../actions/actions-index'
 
 const initialState = {
     mobilesCatalog: [],
-    hidden: true,
-    loading: true
+    loading: true,
+    hidden: true
 }
 
 const mainReducer = (state = initialState, action) => {
@@ -14,11 +14,12 @@ const mainReducer = (state = initialState, action) => {
                 ...state,
                 mobilesCatalog: action.payload,
                 loading: !state.loading
+
             }
         case SHOW_PHONE_DETAILS:
             return {
                 ...state,
-                hidden: !state.hidden
+                hidden: action.payload
             }
         default:
             return state

@@ -14,7 +14,7 @@ app.get('/phones', (request, response) => {
             color: 'Silver',
             photo: 'http://localhost:3001/images/iphone-x.jpg',
             description: '64 GB, 5.8" Super Retina HD Display, 12 Mpx, Red 4G LTE',
-            price: '899.99$'
+            price: '899.99$',
         },
         {
             id: 2,

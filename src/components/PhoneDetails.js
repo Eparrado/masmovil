@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 
 class PhoneDetails extends Component {
     render() {
-        const showComponent = this.props.hidden ? "hidden" : '';
-
         return (
-            <div className={`item--details ${showComponent}`} >
+            <div className="item--details hidden">
                 <p className="details--title">Color:
                     <span className="details--text"> {this.props.color}</span>
                 </p>
@@ -15,7 +13,7 @@ class PhoneDetails extends Component {
                 <p className="details--title">Price:
                     <span className="details--text"> {this.props.price}</span>
                 </p>
-            </div>
+            </div >
         );
 
 

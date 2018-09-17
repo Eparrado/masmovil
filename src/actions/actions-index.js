@@ -15,6 +15,9 @@ export function fetchMobilesData() {
 
 export const SHOW_PHONE_DETAILS = 'SHOW_PHONE_DETAILS'
 
-export function showPhoneDetails() {
-    return ({ type: SHOW_PHONE_DETAILS })
+export function showPhoneDetails(event) {
+    return (dispatch => {
+        event.querySelector('.item--details').classList.toggle('hidden');
+        dispatch({ type: SHOW_PHONE_DETAILS })
+    })
 }
