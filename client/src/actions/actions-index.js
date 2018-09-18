@@ -5,7 +5,7 @@ export const FETCH_DATA = 'FETCH_DATA';
 
 export function fetchMobilesData() {
     return (dispatch) => {
-        axios.get('http://localhost:3001/phones')
+        axios.get('http://localhost:9000/phones')
             .then(response => {
                 dispatch({ type: FETCH_DATA, payload: response.data })
             })
